@@ -54,7 +54,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+In order to keep customer addresses, the store has to select one of the SCD architectures below.
+Type 1: Overwrite the table attribute changes so that the table retains only the latest state
+Type 2: Make the table attribute changes persistent by adding a new row representing the changes. However, I would advice keeping the previous table states in a different schema (i.e., audit schema) so that the state in the CUSTOMER_ADDRESS table is always the latest
 ```
 
 ***
